@@ -35,3 +35,69 @@ And remember always, they are immutable by default here on Rust
 // ===============================
 
 // Functions:
+
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+/*
+
+fn = function
+add = name  < we can not give names that already existing to the function, like fn for example
+(a: i32, b: i32) = parameters, always opening and closing with parentesis ()
+a: and b: are variables 
+after the variable name we have the type of the parameter, in this case i32 is 
+an 32bit integer and we should aways separate with a comma , 
+
+to define what the data we want to be returned we need an arrow ->
+which here means that we want a return of type i32
+
+when we open curly brace and close, everything between is called the
+function body, which here is a+b
+
+*/
+
+// (LET Y) it reads like: Let the variable Y be equal to the value of the function add, with the function arguments 3 and 0
+
+let x = add(1, 1); // calling the function add, with the values of 1, and 1 ( which means = 2)
+let y = add(3, 0); // these values are called function arguments, here the A parameter is 3, B is 0
+let z = add(x, 1); // here we are getting the value of x that was set before, which is 2, so it becames 2+1 so the result to be returned here is 3
+
+// So the value of the variable X is what RETURNS from the function above, and the function
+// since we passed the add it means that we are getting the value from the fn add which is
+// a+b, so the value of X is = add with arguments 1 to a and 1 to b 
+// Which means that the var X is 2
+
+// =======================
+
+// println macro
+
+/*
+
+Macros are similar to functions 
+Macros expand into additional code
+println "Prints" (displays) information to the terminal
+which is useful for debugging, just like console log
+
+*/
+
+let life = 42; 
+println! ("Hello World"); // The exclamation means that this is a Macro, not a Function 
+println! ("{:?}", life); // {:?} is a sequence of tokens indicates that we can take a external value and include, here we are passing life, so the value will be passed inside this
+println! ("{:?} {:?}", life, life); // the : with the question marks means that we want a debugging print and not for the end user 
+println! ("the meanin is {:?}", life); // here we pass a phrase with the :? inside {} which means the value after the comma , which here is life, which is a variable that means = 42
+
+/*
+
+We can do it like this too:
+
+let life = 42;
+println! ("{life:?);
+println! ("{life}"); 
+
+without needing to pass the value after the comma like on the examples above
+the only difference between this two is the :? 
+which means that the first one is for debugging
+and the second one can be seen by the final user 
+
+*/
