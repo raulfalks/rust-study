@@ -5,9 +5,9 @@
 // String = "Hello", "string", "this is a string"
 // These are the basic data types 
 
-// =============================== 
+// ===================================================================================
 
-// Variables:
+// VARIABLES
 /* 
 
 Immutable by default, but can be mutable, this helps to improve the speed
@@ -32,9 +32,9 @@ And remember always, they are immutable by default here on Rust
 
 */
 
-// ===============================
+// ===================================================================================
 
-// Functions:
+// FUNCTIONS
 
 fn add(a: i32, b: i32) -> i32 {
     a + b
@@ -68,9 +68,9 @@ let z = add(x, 1); // here we are getting the value of x that was set before, wh
 // a+b, so the value of X is = add with arguments 1 to a and 1 to b 
 // Which means that the var X is 2
 
-// =======================
+// =====================================================================================================
 
-// println macro
+// MACROS - println
 
 /*
 
@@ -102,9 +102,9 @@ and the second one can be seen by the final user
 
 */
 
-// ====================
+// ========================================================================
 
-// Control Flow - Execution Flow 
+// CONTROL FLOW - EXECUTION FLOW 
 
 /*
 
@@ -184,6 +184,49 @@ let g > 99 {
   */
 
 
-// ==========================
+// ==============================================================================
 
-// Repetition using loops: 
+// REPETITION USING LOOPS
+
+/*
+
+Called "looping" or "iteration"
+
+Multiple types of loops
+
+- "loop" - infinite loop
+- "while" - conditional loop
+
+
+*/
+
+// Starting with the infinite loop 
+
+let mut tiro = 0;
+loop { 
+    if tiro == 5{
+        break;
+    }
+    println!("{:?", tiro);
+    tiro = tiro + 1; 
+}
+
+// Here we are checking if the MUTABLE variable, tiro, is == to 5, if not it will add +1 
+// infinitely until the value is == 5, when it reaches 5 we stop ' BREAK '
+// on this example it will loop 5 times since the var tiro starts with 0, but will change in
+// every loop, because its mutable, if we didnt set that is mutable, it will run forever
+
+
+// Now a While loop or Conditional loop
+
+let mut noise = 0; 
+while noise != 5 { // != means not equal, so in this example is true, which means that we are entering the next loop
+    println!("{:?}", noise); // debug print because of the :? 
+    noise = noise + 1; // so it will require 5 loops since its 0, until it reaches 5, and then finally BREAK
+}
+
+// Both type of loops can be stopped by using Break 
+
+// ========================================================================================================
+
+// TOOL INSTALATION 
