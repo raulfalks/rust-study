@@ -101,3 +101,89 @@ which means that the first one is for debugging
 and the second one can be seen by the final user 
 
 */
+
+// ====================
+
+// Control Flow - Execution Flow 
+
+/*
+
+Code executed line-by-line
+Actions are performed & control flow may change
+    This is possible with specific conditions such as:
+        "if"
+        "else"
+        "else if"
+     
+*/
+
+/*
+This is a simple flow for example: 
+
+let v = 1;
+let r = 2; 
+let g = 3; 
+*/
+
+// Now lets use this with contorl flow logic 
+
+let v = 99; 
+if v > 99 {
+    println!("Big Number"); 
+} else {
+    println!("Small number");
+}
+
+// And now lets take a look into a nested if.. else
+
+let r = 99;
+if r > 99 {
+    if r > 200 {
+        println!("Huge number"); 
+    } else {
+        println!("Big number");
+    }
+ } else { 
+    println!("Small number");
+ }
+
+ // Here we are checking if is greater than 99, if yes, we check if its greater than 200, if its huge number
+ // If not we print big number 
+ // If not greater than 99 we simply print small number 
+
+ // Now lets do kind of the same thing but without nesting 
+
+ let g = 99; 
+ if g > 200 {  // We check 99 first and then 200 
+    println!("Huge number");
+else if g > 99 {
+    println!("Big number");
+} else {
+    println!("Small number");
+}
+ }
+
+ /*
+Meanwhile this will not work, because we are first checking the lowest number, so if its 300
+for example it will pass big number, we should aways check and be aware of the biggest value
+which is 200, because on this case, once the thing is true, it simply jump out for the next
+part of the code, so in the code below, if the value is 300, it will print big number
+but it should be huge number, and the reason is not 
+is because we are checking 99 before checking 200 
+
+Remember: code executes line by line 
+
+let g > 99 {
+    println!("Big number");
+} else if g > 200 {
+    println!("Huge number"); 
+} else {
+    println!("Small number");
+}
+ 
+  */
+
+
+// ==========================
+
+// Repetition using loops: 
