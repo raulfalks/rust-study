@@ -230,3 +230,13 @@ while noise != 5 { // != means not equal, so in this example is true, which mean
 // ========================================================================================================
 
 // TOOL INSTALATION 
+
+// All done
+
+// COMMENTS
+
+// All done
+
+// ======================================================================
+
+// FIRST EXERCISE
